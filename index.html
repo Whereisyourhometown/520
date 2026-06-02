@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>烟花全屏音乐网页</title>
+    <style>
+        * {margin: 0;padding: 0;}
+        html,body {width:100vw;height:100vh;overflow:hidden;}
+        body {
+            /*已替换成你的烟花图，本地使用方法：图片改名bg.jpg和html、神.mp3放同一个文件夹*/
+            background: url("bg.jpg") center center no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<audio id="bgm" loop hidden preload="auto">
+    <source src="神.mp3" type="audio/mpeg">
+
+
+<script>
+    let audio = document.getElementById('bgm');
+    //点击页面播放循环音乐
+    document.body.onclick = ()=>{
+        audio.play();
+    }
+</script>
+</body>
+</html>
